@@ -2,8 +2,7 @@ name: DigitalOcean App workflow
 
 on:
   push:
-    paths:
-    - 'BE/**'
+    branches: [main]
 
 env:
   REGISTRY: "registry.digitalocean.com/spring-boot-alterra-pos-registry"
