@@ -2,12 +2,16 @@ name: DigitalOcean App workflow
 
 on:
   push:
-    branches: [ main ]
+    paths:
+    - 'BE/**'
 
 env:
   REGISTRY: "registry.digitalocean.com/spring-boot-alterra-pos-registry"
   IMAGE_NAME: "alterra-pos"
-
+defaults:
+  run:
+    working-directory: BE
+    
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
